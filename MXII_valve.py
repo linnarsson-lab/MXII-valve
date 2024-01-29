@@ -214,11 +214,13 @@ class MX_valve():
         # Valve bussy
         elif response == b'*' or response == b'**':
             return False
+        elif response == b'':
+            raise ValueError(f'The {self.name} valve did not send a response back. This probably indicates that it is not properly connected.')
         else:
             print(''' If you see this message, you found an unknown error,
             Please send me (Lars Borm) a message with the following error code
             and your script. I will try to fix it.''')
-            raise ValueError('Unknown valve response: "{}", can not interpret',format(response))
+            raise ValueError('Unknown valve response: "{}", can not interpret'.format(response))
 
     def get_port(self):
         """
