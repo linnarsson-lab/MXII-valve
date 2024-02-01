@@ -83,18 +83,20 @@ class MX_valve():
     
     """
      
-    def __init__(self, address, ports = 10, name = '', verbose = False):
+    def __init__(self, address, ports = 10, name = '', verbose = False,  baudrate = 19200):
         '''
         Input:
         `Address`: address of valve, '/dev/ttyUSBX' on linux. 'COMX' on windows.
         `Ports` (int): Number of ports, default = 10.
         `Name` (str): Name to identify valve for user (not necessary).
+        `baudrate` (int): Baudrate for communication, default 19200.
+            Other options: 9600, 19200, 38400, 57600.
         
         '''
         self.address = address
         self.ports = ports
         self.name = name
-        self.ser = serial.Serial(address, timeout = 2, baudrate=19200, 
+        self.ser = serial.Serial(address, timeout = 2, baudrate = baudrate, 
                    write_timeout=5)
         self.verbose = verbose
         self.verboseprint = print if self.verbose else lambda *a, **k: None
