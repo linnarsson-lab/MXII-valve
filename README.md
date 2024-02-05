@@ -1,7 +1,7 @@
 # MXII-valve
 MX Series II actuated valve from Rheodyne, now IDEX.
 
-Python module to control the [MX Series II](https://www.idex-hs.com/store/valves/stand-alone-valve-products/mx-series-iitm.html) actuated valve over USB. Software was written susing the MX Series II(TM) Driver Development Package, File-1418039677, downloaded from [here](https://www.idex-hs.com/docs/default-source/product-manuals/mx-series-ii-operating-manual.pdf?sfvrsn=419402f3_3).
+Python module to control the [MX Series II](https://www.idex-hs.com/store/products/fluidics/valves/standalone_valve_products/mx_series_ii) actuated valve over USB. Software was written susing the MX Series II(TM) Driver Development Package, File-1418039677, downloaded from [here](https://www.idex-hs.com/docs/default-source/product-manuals/mx-series-ii-operating-manual.pdf?sfvrsn=419402f3_3).
 
 # Get started
 - Make sure [pyserial](https://pythonhosted.org/pyserial/) is installed.
